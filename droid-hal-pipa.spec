@@ -11,7 +11,14 @@
 %define enable_dtbo_update 1
 %define enable_vendor_boot_update 1
 
-%define makefstab_skip_entries / /product /system /system_ext /vendor
+%define makefstab_skip_entries / /product /system /system_ext /vendor /odm
+
+%define straggler_files \
+/bugreports\
+/cache\
+/d\
+/sdcard\
+%{nil}
 
 %include rpm/dhd/droid-hal-device.inc
 
